@@ -28,7 +28,7 @@ SECRET_KEY = 'i2t1nrwlwsdu&gl1-z-^nlc75%rp(gndy9-etx=&wsg%wb6^&5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,13 +83,22 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     # }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'django_db', # DB명
+    #     'USER': 'python', # 데이터베이스 계정
+    #     'PASSWORD': 'python', # 계정 비밀번호
+    #     'HOST': 'localhost', # 데이테베이스 IP
+    #     'PORT': '3306', # 데이터베이스 port
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'djongo',
         'NAME': 'django_db', # DB명
         'USER': 'python', # 데이터베이스 계정
         'PASSWORD': 'python', # 계정 비밀번호
         'HOST': 'localhost', # 데이테베이스 IP
-        'PORT': '3306', # 데이터베이스 port
+        'PORT': '27017', # 데이터베이스 port
     }
 }
 
